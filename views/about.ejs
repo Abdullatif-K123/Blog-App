@@ -1,0 +1,8 @@
+<%- include("partials/header") %>
+<h1>About</h1>
+<!-- print the articals -->
+
+<% for(let i=0;i<about_articals.length;i++){%> 
+    <li><%= about_articals[i] %></li>
+<%};%>
+<%- include("partials/footer") %> 
