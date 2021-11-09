@@ -1,9 +1,12 @@
     <%- include("partials/header")  %>
     <h1>Home</h1>
     <!-- print the articals -->
-
-    <% Posts.forEach(function(elem){%> 
+  <% Posts.forEach(function(elem){%> 
         <h3><%=elem.Titles%></h3>
-        <li><%= elem.Blogs %></li>
-    <%});%>
+        <li>
+        <%= elem.Blogs.substring(0,100) + "..." %>
+        <a href="/post/<%=elem.Titles%>">Read More</a>
+        </li>
+    <%});%> 
+  
     <%- include("partials/footer") %>    

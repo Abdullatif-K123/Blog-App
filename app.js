@@ -32,8 +32,16 @@ app.post('/',function(req,res){
 
 //Posts rquireed 
 app.get('/post/:postName',function(req,res){
+   
  let Blogs = myFunc.obj.finds(req.params.postName,Posts);
   res.render("post.ejs",{Blogs: Blogs});
+});
+
+app.post('/post',function(req,res){
+    Blogs = JSON.stringify(req.body);
+    Blogs = JSON.parse(Blogs);
+    console.log(Blogs);
+    res.render ("post.ejs",{Blogs: Blogs});
 });
 //about Page route !!
 const about_articals = [aboutContent];
