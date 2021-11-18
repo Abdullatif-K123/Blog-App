@@ -4,11 +4,11 @@
 <form class="row g-3" action = '/' method = 'post'>
     <div class="col-md-15">
       <label for="inputEmail4" class="form-label">Title</label>
-      <input type="text" class="form-control" id="inputEmail4" name = "Title">
+      <input type="text" class="form-control" id="inputEmail4" name = "Title" min="3" max=20 required>
     </div>
     <div class="col-md-15">
         <label for="inputEmail4" class="form-label">Post</label>
-        <textarea type="text-box" class="form-control" id="inputEmail4" rows="4" cols="50" name = 'Blogs'></textarea>
+        <textarea type="text-box" class="form-control" id="inputEmail4" rows="4" cols="50" name = 'Blogs' minlength="50"  required></textarea>
       </div>
     <div class="col-12">
       <button type="submit" class="btn btn-primary">Publish</button>

@@ -4,15 +4,16 @@ var _ = require("lodash");
     let obj = {
      
          tit: "Not found such an Titles", 
-         blog: "This page doesn't exstis bitch don't waste my fucking time or I will fuck somebodys wife"
+         blog: "This page doesn't exstis bitch don't waste my fucking time or I will fuck somebody's wife"
     } ;
      for(let i = 0; i < Posts.length;i++){
-        if(_.lowerCase(Posts[i].Titles).replace(/ /g,'')  === _.lowerCase(findName).replace(/ /g,'')){
+        if(_.lowerCase(Posts[i]._id).replace(/ /g,'')  === _.lowerCase(findName).replace(/ /g,'')){
           obj = { 
               
-              tit: Posts[i].Titles,
-              blog: Posts[i].Blogs
+              tit: Posts[i].name,
+              blog: Posts[i].blog
           };
+          break;
         }
       
      }
